@@ -1,0 +1,17 @@
+<%- include('./includes/head') %>
+<%- include('./includes/nav') %>
+
+<div class="container">
+    <form action="/cadastro/index" method="post" class="form-group">
+        <p class="form-title">Cadastro de Notícias</p>
+
+        <%- include('./includes/messages') %>
+
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+        <input name="titulo" class="form-input" type="text" placeholder="Título da Noticia">
+        <textarea name="descricao" class="form-text" cols="30" rows="10" placeholder="Conteúdo da Notícia"></textarea>
+        <button class="form-btn" type="submit">Submit</button>
+    </form>  
+</div>
+
+<%- include('./includes/footer') %>

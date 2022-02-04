@@ -1,0 +1,21 @@
+<%- include('./includes/head') %>
+<%- include('./includes/nav') %>
+
+<div class="container">
+    <% noticias.forEach(noticia => { %>        
+        <div class="noticia">
+            <div class="titulo-noticia">
+                <%= noticia.titulo %>
+            </div>
+            <div class="conteudo-noticia">
+                <%= noticia.descricao %>
+            </div>
+            <div class="btn-container">
+                <a class="btn-noticia" href="">Acessar</a>
+            </div>
+        </div>
+    <% }); %>            
+     
+</div>
+
+<%- include('./includes/footer') %>
